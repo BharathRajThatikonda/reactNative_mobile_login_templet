@@ -102,7 +102,9 @@ class LoginScreen extends Component {
         ]).start()
     }
 
-
+    navigateToOTPScreen = () =>{
+        alert("Navigate To OTP Screen")
+    }
 
     increaseHeightOfLogin = () => {
 
@@ -187,7 +189,11 @@ class LoginScreen extends Component {
                         borderRadius: 30
                     }}
                 >
+                <TouchableOpacity
+                        onPress={() => this.navigateToOTPScreen()}
+                    >
                     <Icon name="md-arrow-forward" style={{ color: 'white' }} />
+                    </TouchableOpacity>
                 </Animated.View>
 
                 <ImageBackground
@@ -202,7 +208,7 @@ class LoginScreen extends Component {
                         </Animatable.View>
                     </View>
 
-                    {/** BOTTOM HALF **/}
+{/*************************************** BOTTOM HALF *****************************************/}
                     <Animatable.View animation="slideInUp" iterationCount={1}>
 
                         <Animated.View
